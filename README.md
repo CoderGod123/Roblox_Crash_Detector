@@ -1,186 +1,71 @@
-🚨 Roblox Crash Monitor
+RobloxCrashMonitor
 
-A lightweight Windows utility that automatically monitors Roblox log files and detects crash events in real time. When a crash occurs, it immediately sends webhook notifications with detailed context such as timestamps, crash signatures, and analysis. It is designed to run silently in the background with minimal resource usage.
+RobloxCrashMonitor is a lightweight background tool that automatically detects Roblox client crashes by monitoring Windows dump files, logging events, and optionally alerting you in real time. It’s designed to help players, developers, and testers identify crash patterns quickly without digging through system folders.
 
-✨ Features
+📥 Download & Setup
 
-✔ Real-time crash detection
-Continuously watches Roblox log files and identifies crash signatures instantly.
+Download CrashMonitor.zip
 
-✔ Webhook notifications
-Automatically sends structured crash alerts to a Discord webhook (or any API endpoint).
+Extract it — you will see:
 
-✔ Silent background operation
-Runs completely hidden — no windows or console.
-
-✔ Auto-elevation
-Requests administrator permissions only when required.
-
-✔ Open-source transparency
-Full Python source code is included for review or modification.
-
-✔ Customizable settings
-Scan interval, monitored paths, and webhook URLs can be adjusted via config.
-
-🧰 Requirements
-
-Using the .exe
-
-No Python required
-
-No dependencies
-
-Windows 10 or 11
-
-To rebuild from source:
-
-Python 3.9+
-
-PyInstaller
-
-Windows OS
-
-📦 ZIP Package Contents
-
-When you download CrashMonitor.zip, it contains:
-
-```
 CrashMonitor/
-│
-├─ config.example.json        ← Template config (rename to config.json)
-├─ CrashMonitor.exe           ← Main program — run this
-├─ CrashMonitor.spec          ← PyInstaller metadata (ignore)
-└─ RobloxCrashMonitor.py      ← Full readable Python source
-```
-
-🚀 How to Install & Run
-1. Download the ZIP
-
-Download CrashMonitor.zip from the Releases page.
-
-2. Extract the ZIP
-
-Example path:
-
-C:\Users\YourName\Desktop\CrashMonitor\
-
-3. Configure (Required)
-
-Rename:
-
-config.example.json → config.json
+├─ config.example.json   ← template config (rename to config.json)
+├─ CrashMonitor.exe      ← main program (run this)
+├─ CrashMonitor.spec     ← PyInstaller metadata (ignore)
+└─ RobloxCrashMonitor.py ← readable full source code
 
 
-Then edit config.json:
+Rename config.example.json → config.json
 
-{
-    "webhook_url": "YOUR_WEBHOOK_URL_HERE",
-    "monitor_paths": [
-        "%LOCALAPPDATA%/Roblox/logs"
-    ],
-    "scan_interval": 3
-}
+Edit your config to match your preferred options
 
-4. Run the program
+Run CrashMonitor.exe
 
-Double-click:
+⚙️ Features
 
-CrashMonitor.exe
+Real-time crash detection
 
+Tracks .dmp files automatically
 
-It will:
+Optional sound notifications
 
-Auto-elevate if needed
+Optional Discord logging (if configured)
 
-Run silently in the background
+Lightweight & low-CPU
 
-Start monitoring immediately
+Fully open Python source included
 
-Send alerts on crash detection
+📄 Configuration (config.json)
 
-⚙ Configuration Options
-webhook_url
+Your config controls notifications, logging, and any paths you want to override.
+Every option is documented inside the file.
 
-The URL where crash notifications are sent.
+If you delete config.json, the program will recreate it automatically using defaults.
 
-monitor_paths
+🛠️ Issues, Bugs & Support
 
-List of directories to watch.
-Supports Windows environment variables like %LOCALAPPDATA%.
+If you have any problems, you can get help in two ways:
 
-scan_interval
+🔧 GitHub Issues
 
-How often (in seconds) the logs are scanned for updates.
+If something is broken, please open an issue here:
+Issues → New Issue
 
-🧪 How Crash Detection Works
+Include:
 
-The program analyzes Roblox log files for:
+What happened
 
-Crash signatures
+Your log output
 
-Kernel panic tags
+(Optional) Your config.json
 
-Unhandled exception messages
+💬 Discord Support
 
-Stack traces
+You can also contact me directly:
+Discord: snowwhitecodez
 
-Sudden log termination patterns
+I usually reply faster on Discord.
 
-When a crash is detected, it sends a webhook with:
+✔️ License
 
-Timestamp
-
-Log filename
-
-Crash type
-
-Surrounding log lines
-
-System time
-
-🛠 Rebuilding from Source
-
-If you edit the Python file and want to rebuild the .exe:
-
-pyinstaller --noconsole --onefile RobloxCrashMonitor.py
-
-
-Your output will appear in:
-
-/dist/CrashMonitor.exe
-
-🔒 Security Notes
-
-No personal data is collected
-
-Only crash-related log content is processed
-
-You control where data is sent (via webhook)
-
-Full source code is included
-
-❗ Troubleshooting
-Webhook not sent
-
-Invalid webhook URL
-
-Webhook is rate-limited
-
-Internet connection issue
-
-No crashes detected
-
-Roblox may have changed log formats — open an issue and include a sample log.
-
-Program closes instantly
-
-Run as administrator
-
-Ensure all monitored paths exist
-
-Recreate config.json from the example
-
-❤️ Credits
-
-Roblox Crash Monitor
-Created by: snowwhitecodez
+MIT License — free to use, modify, and redistribute.
