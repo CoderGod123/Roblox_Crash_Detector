@@ -7,14 +7,13 @@ RobloxCrashMonitor is a lightweight background tool that automatically detects R
 Download CrashMonitor.zip
 
 Extract it — you will see:
-'''
+```
 CrashMonitor/
-├─ config.example.json   ← template config (rename to config.json)
-├─ CrashMonitor.exe      ← main program (run this)
-├─ CrashMonitor.spec     ← PyInstaller metadata (ignore)
+├─ config.example.json ← template config (rename to config.json)
+├─ CrashMonitor.exe ← main program (run this)
+├─ CrashMonitor.spec ← PyInstaller metadata (ignore)
 └─ RobloxCrashMonitor.py ← readable full source code
-'''
-
+```
 Rename config.example.json → config.json
 
 Edit your config to match your preferred options
