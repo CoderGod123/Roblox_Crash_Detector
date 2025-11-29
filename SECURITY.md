@@ -1,24 +1,39 @@
-Security Information – RobloxCrashMonitor
+# Security Policy – RobloxCrashMonitor
 
-Purpose
-This document explains the security posture of RobloxCrashMonitor and provides guidance for reporting potential security concerns.
+## Security Overview
+RobloxCrashMonitor is designed with user safety and privacy as primary priorities.
 
-Security Design
-• The Utility runs entirely offline unless the user adds a webhook URL.
-• No remote servers, analytics, or telemetry are used.
-• The Software reads only local Roblox log/crash folders.
-• No files are modified, deleted, or altered.
+- The Software operates entirely offline unless the user manually adds a webhook URL.
+- No telemetry, analytics, or tracking features are included.
+- The Software only reads from Roblox crash/log directories.
+- The Software does not modify, delete, or write to any system files.
 
-Known Vulnerabilities
+## Security Model & Protections
+- All network communication is 100% user-controlled.
+- No data leaves the user's device unless the user configures a webhook.
+- The Software includes no remote code execution, auto-updates, or external connections.
+
+## Known Vulnerabilities
 There are currently no known security vulnerabilities.
 
-User-Controlled Network Use
-Network communication only occurs if the user adds a webhook URL to config.json.  
-No data is ever sent anywhere automatically.
+## User-Controlled Networking
+Network communication only occurs when the user provides a webhook URL in `config.json`.
 
-Responsible Disclosure
-If you discover a potential security issue, please report it through:
-• GitHub Issues (preferred)
-• Discord: snowwhitecodez
+Nothing is transmitted automatically.
 
-Please do not publicly disclose a vulnerability before contacting me.
+## Responsible Disclosure
+If you discover a potential security issue, please contact me privately before public disclosure.
+
+Preferred channels:
+- GitHub Issues  
+- Discord: snowwhitecodez
+
+I will respond promptly to verify and address valid reports.
+
+## Scope
+This Security Policy applies to:
+- RobloxCrashMonitor.exe
+- RobloxCrashMonitor.py
+- Associated configuration files
+
+Modified versions, repackaged builds, or third-party adaptations are not covered.
