@@ -1,20 +1,24 @@
-Security Policy — RobloxCrashMonitor
+Security Information – RobloxCrashMonitor
 
-Supported Versions
-Security fixes are provided only for the latest release unless otherwise stated.
+Purpose
+This document explains the security posture of RobloxCrashMonitor and provides guidance for reporting potential security concerns.
 
-Reporting a Vulnerability
-If you discover a vulnerability, misbehavior, or security risk:
-1. Open a GitHub Issue titled “[Security] …”
-2. OR contact the developer privately via Discord: snowwhitecodez
+Security Design
+• The Utility runs entirely offline unless the user adds a webhook URL.
+• No remote servers, analytics, or telemetry are used.
+• The Software reads only local Roblox log/crash folders.
+• No files are modified, deleted, or altered.
 
-Do NOT publicly share exploits or vulnerabilities before reporting.
+Known Vulnerabilities
+There are currently no known security vulnerabilities.
 
-What This Project Does NOT Do
-• It does not access online services.
-• It does not transmit or collect data.
-• It does not contain telemetry.
-• It does not modify Roblox installations.
+User-Controlled Network Use
+Network communication only occurs if the user adds a webhook URL to config.json.  
+No data is ever sent anywhere automatically.
 
 Responsible Disclosure
-All reports are handled respectfully. No blame or targeting of users.
+If you discover a potential security issue, please report it through:
+• GitHub Issues (preferred)
+• Discord: snowwhitecodez
+
+Please do not publicly disclose a vulnerability before contacting me.
