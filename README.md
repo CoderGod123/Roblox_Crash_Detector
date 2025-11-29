@@ -63,8 +63,10 @@ Your log output
 You can also contact me directly:
 Discord: snowwhitecodez
 
-I usually reply faster on Discord.
-
 ✔️ License
 
 MIT License — free to use, modify, and redistribute.
+
+## ❤️ Credits
+
+Developed and tested by **snowwhitecodez**
