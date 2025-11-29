@@ -1,80 +1,228 @@
 # Roblox_Crash_Detector
-Roblox Crash Monitor
+🚀 Roblox Crash Monitor
 
-Roblox Crash Monitor is a lightweight, fully automated crash-detection utility designed to watch your local Roblox logs in real time and instantly notify you when something goes wrong. Whether you're debugging performance issues, diagnosing GPU/engine failures, or just want reliable crash insight, this tool handles everything quietly in the background.
+An automated Windows background service that detects Roblox crashes in real time, analyzes the crash report, categorizes the crash type (GPU, memory, HTTP, physics, engine, etc.), saves clean crash logs, and optionally sends details to a Discord webhook.
 
-⭐ Features
-🔍 Real-Time Crash Detection
+This tool helps players, developers, testers, and support teams quickly diagnose Roblox stability problems with zero manual work.
 
-Continuously monitors your Roblox logs directory and automatically identifies common crash types:
+🔥 Features
+✔ Real-Time Crash Detection
 
-GPU/Graphics driver failures
+Detects newly generated Roblox crash .txt files instantly using a filesystem event watcher.
 
-Memory exhaustion
+✔ Auto Crash Analysis
 
-HTTP/network faults
+Every crash report is parsed and categorized:
 
-Physics engine freezes
+GPU crash
 
-General engine crashes
+Out-of-Memory crash
 
-📤 Discord Webhook Alerts
+HTTP/Connection crash
 
-When a crash occurs, the tool instantly sends:
+Engine assertion
 
-Crash category (GPU, Memory, HTTP, etc.)
+Physics breakdown
 
-Log excerpts
+Unknown / corrupted crash
 
-A nicely formatted debug summary
+✔ Saves Clean Logs
 
-Timestamp + system information
-Straight to your Discord channel.
+Each crash is saved to:
 
-🗂 Debug Log Generation
+C:\Users\<YOU>\OneDrive\Desktop\Crashes\Roblox
 
-Every crash automatically produces:
 
-A neat .txt debug report
+with names like:
 
-Timestamped and stored locally
+CRASH_GPU_2025-11-28_20-35-02.txt
 
-Organized for easy troubleshooting
+✔ Discord Webhook Alerts
 
-🛡 Silent Background Service
+Automatically sends:
 
-Runs invisibly (no window)
+Crash type
+
+Timestamp
+
+Summary
+
+Full log
+
+Device diagnostics
+
+✔ Persistent Background Process
+
+Runs silently
+
+No console window
+
+Automatically creates a Task Scheduler job
 
 Prevents multiple instances
 
-Automatically recreates missing folders/files
+Self-heals if the task is missing
 
-Minimal CPU & RAM usage
+Fully automatic on startup
 
-🧰 Built for Developers & Everyday Players
+✔ Debug Logging
 
-Zero setup required — just add your webhook
+All internal script errors go to:
 
-Designed for Python 3.14+
+C:\Users\<YOU>\OneDrive\Desktop\Scripts\Roblox\Logs
 
-Includes PyInstaller-ready executable
 
-Works even if Roblox logs get reset or cleared
+including:
 
-🚀 Getting Started
+Heartbeat logs
 
-Download the latest release (.exe).
+Errors
 
-Edit config.json with your Discord webhook.
+Exceptions
 
-Run the program as Administrator (required for monitoring).
+Webhook failures
 
-Whitelist the file in your antivirus if necessary (unsigned executables may be flagged).
+Permission issues
 
-📌 Additional Notes
+Analysis breakdowns
 
-This tool does not modify Roblox or interact with the game client — it only reads local crash logs.
+✔ AV-Friendly Build
 
-If you adjust or customize the Python source, rebuild the executable using PyInstaller.
+No external dependencies
 
-Works fully offline except when posting crash reports to your webhook.
+No suspicious network traffic except your webhook
+
+Can be built locally (no need to trust someone else’s EXE)
+
+Open-source = inspect every line
+
+📥 Download
+
+Go to Releases on the right → download:
+
+RobloxCrashMonitor.exe
+
+
+or the ZIP package if included.
+
+🛠 How to Install
+1. Run the EXE (Run as Administrator recommended)
+
+The first run:
+
+Sets up the log folders
+
+Schedules the auto-startup task
+
+Verifies crash folder access
+
+Starts silent monitoring
+
+2. Customize Your Discord Webhook
+
+Edit the script / config and replace:
+
+WEBHOOK_URL = "your webhook here"
+
+
+⚠️ GitHub build does NOT include your webhook — users must add their own.
+
+🖥 Task Scheduler (Auto-Start)
+
+The EXE auto-creates:
+
+Task Name: RobloxCrashMonitor
+Trigger: On system startup
+User: Current user
+Run Mode: Hidden
+
+You do not need to set anything manually.
+
+📊 Crash Types the Tool Detects
+Crash Type	Meaning	Typical Fix
+GPU Crash	Driver reset, dx11 failure	Update GPU drivers, lower graphics
+Memory Crash	RAM full, paging exhaustion	Close apps, increase virtual memory
+HTTP Crash	Request failure, 429/500/403	Check WiFi, disable VPNs
+Engine Fatal	Roblox internal assert	Reinstall Roblox
+Physics Crash	Rigidbody blowup, nan error	Game-specific bug
+Unknown/Raw	Not enough data	Replace log manually
+
+The analyzer gives human-readable explanations.
+
+🧪 How to Build Your Own EXE (Safe Build)
+
+Install PyInstaller:
+
+pip install pyinstaller
+
+
+Build:
+
+python -m PyInstaller --noconsole --onefile RobloxCrashMonitor.py
+
+
+The EXE will appear in:
+
+dist/
+
+
+This is the file you upload to GitHub Releases.
+
+🛡 Antivirus False-Positive Info
+
+Because:
+
+It runs silently
+
+It monitors files
+
+It sends webhooks
+
+… some antivirus tools may flag it as “Generic Trojan/Monitor”.
+
+This is a false positive.
+
+Fix:
+
+Upload to GitHub Release (makes AV trust it more)
+
+Whitelist the EXE path
+
+Build it yourself from source
+
+🧩 Project Structure
+/RobloxCrashMonitor
+│
+├── README.md
+├── RobloxCrashMonitor.py         # Source code (open)
+├── icon.ico                      # Optional icon
+│
+└── dist/
+    └── RobloxCrashMonitor.exe    # Release executable
+
+❓ Frequently Asked Questions
+Q: Does it record private info?
+
+No. It only reads Roblox crash files. Nothing else.
+
+Q: Does it send my data?
+
+Only crash logs — and ONLY to your webhook, which you set.
+
+Q: Do I need admin?
+
+Not required, but recommended for:
+
+Task Scheduler
+
+Crash folder access
+
+Silent mode
+
+Q: What if my AV deletes it?
+
+Whitelist it or build the EXE yourself using PyInstaller.
+
+📩 Support
+
+If you need help, create an issue 
