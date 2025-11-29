@@ -2,54 +2,53 @@ Privacy Notice for RobloxCrashMonitor
 Last Updated: November 2025
 
 Overview
-RobloxCrashMonitor (“the Utility”) is a local desktop tool designed to help users detect potential Roblox-related crashes or errors on their own system. This Privacy Notice explains what information the Utility does not collect, how it operates, and your rights as a user.
+RobloxCrashMonitor (“the Utility”) is a local desktop tool that helps users detect Roblox-related crashes on their own device. This Privacy Notice explains how the Utility operates and what information it does not collect.
 
 No Data Collection
-RobloxCrashMonitor does NOT collect, store, upload, or transmit any personal data, including but not limited to:
+RobloxCrashMonitor does NOT collect, store, upload, or transmit any personal information. This includes, but is not limited to:
 • usernames
 • IP addresses
-• Roblox account info
+• Roblox account information
 • gameplay data
 • system telemetry
-• logs sent to servers
 • analytics
-All detection and monitoring is performed locally on your device only.
+• logs sent to any server
+
+All monitoring is performed locally on your device.
 
 Files Read by the Utility
 RobloxCrashMonitor only reads:
 • Roblox crash dump files
 • Roblox log files
-• Local directories required to detect crash events
+• Local folders necessary to detect crash events
 
-These files are read locally and never transferred anywhere. The program does not modify any Roblox files or interfere with Roblox operation.
+These files remain on your device. They are never uploaded or shared.
 
 Optional User Configuration
-If you edit the config.json file, the following optional items may be stored locally on your device:
-• Notification settings
-• Paths to crash folders
-• Refresh interval
-• Sound/alert preferences
+If you edit the config.json file, the following preferences are stored locally:
+• Webhook URL (optional)
+• Paths to monitored folders
+• Scan interval
 
 No Network Communication
-RobloxCrashMonitor:
-• Does not connect to the internet by default
-• Does not communicate with any servers
-• Does not perform any online verification
-• Does not have telemetry
+By default, RobloxCrashMonitor:
+• Does not access the internet
+• Does not communicate with external servers
+• Does not include telemetry
+• Sends data ONLY if the user provides a webhook URL
 
 Open-Source Transparency
-Because the source code is included, users may verify that:
-• No external connections are made
+The included source code allows anyone to verify that:
+• No hidden connections exist
 • No data collection occurs
-• No hidden processes run
+• No background tracking is performed
 
 User Responsibility
 Users are responsible for:
-• How they use the program
+• How they use the Software
 • Any modifications they make
-• Their own system configuration
+• Their system configuration
 
 Contact
-If you have questions or concerns:
 Discord: snowwhitecodez
-GitHub Issues: Submit an issue on the repository
+GitHub Issues: Use the repository’s Issues tab
