@@ -67,6 +67,7 @@ Discord: snowwhitecodez
 
 MIT License — free to use, modify, and redistribute.
 
-## ❤️ Credits
-
-Developed and tested by **snowwhitecodez**
+# ---------------------------------------------------------
+# RobloxCrashMonitor
+# ❤️ Developed and maintained by: snowwhitecodez
+# ---------------------------------------------------------
