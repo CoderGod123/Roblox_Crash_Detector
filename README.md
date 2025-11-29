@@ -1,5 +1,4 @@
 # Roblox_Crash_Detector
-.
 
 📘 Roblox Crash Monitor — Advanced Crash Detection & Auto Reporting
 
