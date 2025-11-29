@@ -103,7 +103,6 @@ Go to Releases on the right → download:
 RobloxCrashMonitor.exe
 
 
-or the ZIP package if included.
 
 🛠 How to Install
 1. Run the EXE (Run as Administrator recommended)
