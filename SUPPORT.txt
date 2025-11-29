@@ -1,0 +1,24 @@
+Support & Help — RobloxCrashMonitor
+
+Need help?
+If you run into issues, you can:
+
+1. Create a GitHub Issue
+Go to: Issues → New Issue
+Describe:
+• What error you got
+• What steps you tried
+• Your Windows version
+• Attach logs or screenshots if possible
+
+2. Contact me on Discord
+Username: snowwhitecodez
+
+3. Check the README
+Common setup problems:
+• Incorrect config.json
+• Missing permissions
+• Antivirus blocking the exe
+
+The Developer Promise
+I will do my best to respond, but cannot guarantee support or fixes.

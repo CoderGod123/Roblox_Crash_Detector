@@ -1,0 +1,20 @@
+Security Policy — RobloxCrashMonitor
+
+Supported Versions
+Security fixes are provided only for the latest release unless otherwise stated.
+
+Reporting a Vulnerability
+If you discover a vulnerability, misbehavior, or security risk:
+1. Open a GitHub Issue titled “[Security] …”
+2. OR contact the developer privately via Discord: snowwhitecodez
+
+Do NOT publicly share exploits or vulnerabilities before reporting.
+
+What This Project Does NOT Do
+• It does not access online services.
+• It does not transmit or collect data.
+• It does not contain telemetry.
+• It does not modify Roblox installations.
+
+Responsible Disclosure
+All reports are handled respectfully. No blame or targeting of users.

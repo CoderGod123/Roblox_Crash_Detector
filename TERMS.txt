@@ -1,0 +1,87 @@
+RobloxCrashMonitor – Terms of Use
+Last Updated: 2025
+
+By downloading, running, or modifying RobloxCrashMonitor (the “Software”), you
+agree to the following Terms of Use. If you do not agree, you must not use,
+install, run, or distribute the Software.
+
+1. General Allowance
+You are allowed to download, use, modify, and redistribute the Software freely
+for personal or commercial purposes. This permission includes the ability to
+share modified versions, publish forks, or incorporate portions of the Software
+into your own projects.
+
+Credit to the original creator (“snowwhitecodez”) is appreciated, but not
+required.
+
+2. User Responsibility
+You acknowledge that you are fully responsible for:
+• How you use the Software
+• Any modifications you apply
+• Any changes you make to configuration files
+• Where you distribute the Software
+• What webhooks or endpoints you connect it to
+• Running the Software with administrator permissions
+• Ensuring your system and files are backed up
+
+The Software may interact with Roblox log files and system directories. You
+assume all risk for these interactions.
+
+3. No Warranty
+The Software is provided “AS IS”, without warranty of any kind—express or
+implied—including, but not limited to:
+• Stability
+• Security
+• Reliability
+• Performance
+• Accuracy of crash detection
+• Compatibility with specific hardware or software
+• Error-free operation
+
+4. Zero Liability
+UNDER NO CIRCUMSTANCES SHALL THE AUTHOR (“snowwhitecodez”) BE LIABLE FOR ANY
+DAMAGES OR LOSSES OF ANY KIND, INCLUDING BUT NOT LIMITED TO:
+• Corrupted files
+• System instability
+• Data loss
+• Roblox bans, account issues, or corrupted game data
+• Antivirus false detections or quarantines
+• Hardware issues
+• Crashes caused by misconfiguration
+• Damage caused by modified versions of the Software
+• Loss of income, uptime, progress, or productivity
+• Any direct, indirect, incidental, or consequential damages
+
+Your use of the Software is entirely at your own risk.
+
+5. Third-Party Services
+If you connect the Software to third-party services (such as Discord webhooks),
+you are responsible for:
+• Ensuring you have permission to use those services
+• Configuring them properly
+• Any data transmitted to them
+• Complying with their Terms of Service
+
+6. Modifications & Redistribution
+You may:
+• Modify the Software
+• Redistribute it
+• Rebuild it
+• Embed it in larger projects
+• Sell or monetize your modified version
+
+However, all redistributed versions must include:
+• The License
+• These Terms of Use
+• A notice explaining that the author is not responsible for any issues caused by modified versions
+
+7. Agreement
+By using the Software, you affirm that:
+• You understand and accept all risks
+• You release the author from all liability
+• You will not attempt to hold the author responsible for any malfunction, crash, data loss, or issue
+• You use the Software voluntarily and at your own discretion
+
+If you disagree with these terms, do not use RobloxCrashMonitor.
+
+RobloxCrashMonitor – Created by: snowwhitecodez

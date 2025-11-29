@@ -1,0 +1,55 @@
+Privacy Notice for RobloxCrashMonitor
+Last Updated: November 2025
+
+Overview
+RobloxCrashMonitor (“the Utility”) is a local desktop tool designed to help users detect potential Roblox-related crashes or errors on their own system. This Privacy Notice explains what information the Utility does not collect, how it operates, and your rights as a user.
+
+No Data Collection
+RobloxCrashMonitor does NOT collect, store, upload, or transmit any personal data, including but not limited to:
+• usernames
+• IP addresses
+• Roblox account info
+• gameplay data
+• system telemetry
+• logs sent to servers
+• analytics
+All detection and monitoring is performed locally on your device only.
+
+Files Read by the Utility
+RobloxCrashMonitor only reads:
+• Roblox crash dump files
+• Roblox log files
+• Local directories required to detect crash events
+
+These files are read locally and never transferred anywhere. The program does not modify any Roblox files or interfere with Roblox operation.
+
+Optional User Configuration
+If you edit the config.json file, the following optional items may be stored locally on your device:
+• Notification settings
+• Paths to crash folders
+• Refresh interval
+• Sound/alert preferences
+
+No Network Communication
+RobloxCrashMonitor:
+• Does not connect to the internet by default
+• Does not communicate with any servers
+• Does not perform any online verification
+• Does not have telemetry
+
+Open-Source Transparency
+Because the source code is included, users may verify that:
+• No external connections are made
+• No data collection occurs
+• No hidden processes run
+
+User Responsibility
+Users are responsible for:
+• How they use the program
+• Any modifications they make
+• Their own system configuration
+
+Contact
+If you have questions or concerns:
+Discord: snowwhitecodez
+GitHub Issues: Submit an issue on the repository
