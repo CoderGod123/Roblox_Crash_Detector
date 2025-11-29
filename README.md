@@ -1,242 +1,108 @@
-# Roblox_Crash_Detector
+🛠️ Roblox Crash Monitor
 
-📘 Roblox Crash Monitor — Advanced Crash Detection & Auto Reporting
+A lightweight, silent background tool that automatically detects Roblox crash logs and sends instant alerts to your webhook. Designed for simplicity, portability, and zero setup beyond editing a single config file.
 
-A fully automated background system tray tool that detects Roblox crashes in real-time, analyzes the cause, formats the crash report, and optionally uploads it to a Discord webhook.
+📦 Features
 
-This project is designed for players, developers, and testers who want detailed insight into Roblox client instability — without digging through AppData folders or giant log files.
+✔️ Silent background monitoring
 
-🔥 Features
-Real-Time Crash Detection
+✔️ Auto-elevates to admin when required
 
-✔ Monitors Roblox log files live
-✔ Detects every crash: GPU, Memory, HTTP, Physics, Engine, Client bootstrap
-✔ Classifies the crash type automatically
-✔ Prevents duplicate spam reports (cooldown system)
+✔️ Webhook notifications for crashes
 
-Crash Analysis
+✔️ Lightweight & fast (minimal CPU usage)
 
-✔ Reads and cleans the crash log
-✔ Extracts the actual crash line
-✔ Extracts full stack traces
-✔ Detects common Roblox error patterns
-✔ Provides human-readable explanations
-✔ Computes root cause probability
+✔️ No installation required — standalone EXE
 
-Discord Upload (Optional)
+✔️ Fully configurable via config.json
 
-✔ Sends formatted crash reports
-✔ Includes crash type, stack trace, timestamps
-✔ Sends attached cleaned .txt crash file
-✔ Webhook completely user-controlled
+📥 Download
 
-Local Crash Storage
+Go to the Releases page and download the latest ZIP package:
 
-✔ Saves every crash to Logs/
-✔ Clean readable formatting
-✔ Uses timestamped file naming
-✔ Automatic rotation to prevent logs filling the disk
+👉 Releases: (add your link here once created)
 
-Startup Automation
+Extract the ZIP and follow the steps below.
 
-✔ Prompts to enable auto-start
-✔ Creates a Task Scheduler entry (RobloxCrashMonitor)
-✔ Ensures only one instance runs
-✔ Survives reboots
-✔ Hidden run (no console window) when built as EXE
+⚙️ Configuration (Important)
 
-Stability & Safety
+Inside the ZIP, you’ll see this structure:
 
-✔ Heartbeat system detects self-failure
-✔ Automatically logs script issues
-✔ Sends debug reports to local folder
-✔ Optional Discord debug upload
-✔ No external dependencies once built
+RobloxCrashMonitor.exe
+config.example.json
 
-📦 Download
+1. Rename the config file
 
-Download the latest EXE here:
+Rename:
 
-👉 GitHub Releases → RobloxCrashMonitor.exe
+config.example.json → config.json
 
-No installation required — just run it.
+2. Open config.json and edit your settings
+{
+    "webhook_url": "YOUR_WEBHOOK_HERE",
+    "monitor_paths": [
+        "%LOCALAPPDATA%/Roblox/logs"
+    ],
+    "scan_interval": 3
+}
 
-⚙️ Configuration
+🔍 What each setting means
+Field	Description
+webhook_url	Your Discord/Slack/HTTP webhook receiving the crash alert.
+monitor_paths	Folders where crash logs are scanned. Default works for most users.
+scan_interval	Seconds between each scan (lower = faster, higher = lighter).
+▶️ Running the Program
 
-When you first run the EXE, it will generate a config.json next to it (if missing).
+Double-click RobloxCrashMonitor.exe.
 
-You must edit these fields:
+The program will auto-elevate if needed.
 
-1. webhook_url (REQUIRED for Discord reporting)
+It will run silently in the background.
 
-Your Discord webhook URL where crash reports will be sent.
+Alerts will be sent instantly to your webhook upon a crash.
 
-"webhook_url": "https://discord.com/api/webhooks/XXXX/XXXX"
+No window appears — this is normal.
+Check your webhook to confirm it's working.
 
+🧪 Testing Crash Detection
 
-If left empty (""), crash uploads are disabled.
+To verify everything works:
 
-2. roblox_log_dir
+Run the EXE
 
-Where Roblox writes logs.
+Open Roblox
 
-Default:
+Force a crash (Alt+F4, invalid memory, or let it naturally crash)
 
-%LOCALAPPDATA%/Roblox/logs
+Check your webhook — you should receive a formatted crash alert
 
+📁 Project Structure
+/Roblox-CrashMonitor
+ ├─ RobloxCrashMonitor.py     # Source code
+ ├─ RobloxCrashMonitor.exe    # Standalone build
+ ├─ config.example.json       # Template config file
+ └─ README.md
 
-Only change if you use a non-standard Roblox installation.
 
-3. log_dir
+You may include the entire folder in a ZIP for easy distribution.
 
-Where cleaned crash reports will be saved.
+🔒 Antivirus Notes
 
-Default:
+Some antivirus programs may flag unsigned executables.
+This project is open source and contains no malicious behavior.
 
-Logs
+If flagged, add an exception or whitelist the file.
 
-4. stable_seconds
+🧱 Building Your Own EXE (Optional)
 
-How long the monitor waits for a log to finish writing before reading it.
+If you want to compile your own:
 
-Default:
-
-1.5
-
-5. cooldown_seconds
-
-Minimum delay before a repeated crash report is re-uploaded (prevents spam).
-
-Default:
-
-10
-
-🚀 How to Use
-
-Run RobloxCrashMonitor.exe
-
-Approve the UAC admin prompt (required to monitor protected folders)
-
-When asked:
-
-Choose Yes to enable “Run at Startup”
-
-Let the tool run in the background
-
-Play Roblox normally
-
-When Roblox crashes:
-
-A crash file will appear in /Logs
-
-A Discord message is sent (if webhook is set)
-
-🛡 Why Antivirus Might Flag the File
-
-Some AV engines (McAfee, Avast, AVG, etc.) may flag the EXE because:
-
-It monitors a folder in AppData
-
-It reads log files
-
-It runs hidden in the background
-
-It uses UAC to elevate itself
-
-It was built by PyInstaller (common false positive)
-
-✔ All source code is open for review
-✔ EXE contains nothing harmful
-✔ AV flags are generic (“unknown program”)
-✔ Not malicious — just a background process + log monitor
-
-If flagged, whitelist the EXE or the folder.
-
-🧰 Building Your Own EXE
-
-If you want to build from source:
-
-1. Install Python
-
-Python 3.10+ recommended.
-
-2. Install PyInstaller
 pip install pyinstaller
-
-3. Build the EXE
-pyinstaller --noconsole --onefile RobloxCrashMonitor.py
+pyinstaller --onefile RobloxCrashMonitor.py
 
 
-Your EXE will appear in:
+The EXE will appear in the dist/ folder.
 
-dist/RobloxCrashMonitor.exe
+📜 License
 
-🔍 Crash Report Format
-
-Each crash saved in the Logs/ folder includes:
-
-[Crash Type]
-GPU / Memory / HTTP / Physics / Engine / Unknown
-
-[Timestamp]
-2025-11-28 20:31:15
-
-[Summary]
-Roblox shutdown after GPU Timeout
-Possible causes:
-- Outdated GPU driver
-- Overclock instability
-- Roblox rendering bug
-
-[Raw error line]
-...
-
-[Stack trace]
-...
-
-
-Discord uploads include the same formatting + attached TXT file.
-
-🐞 Debug Mode
-
-If the crash monitor itself throws an exception:
-
-Error is logged to debug_last_error.txt
-
-A new timestamped debug log is created
-
-Heartbeat thread will attempt safe recovery
-
-❓ FAQ
-Q: Does Roblox ban for this?
-
-No.
-It only reads your local log files.
-It does not modify, inject, or alter the Roblox client.
-
-Q: Does this send personal information?
-
-No. Only:
-
-Crash type
-
-Error message
-
-Stack trace
-
-Timestamp
-
-No HWID, no IP, no usernames, no system files.
-
-Q: Can I use this without Discord?
-
-Yes — leave "webhook_url": ""
-
-📄 License
-
-MIT License.
-Use freely, modify freely, credit appreciated but not required.
-
-🙋 Need Help?
-
-Open an Issue on GitHub or DM on Discord: snowwhitecodez
+Code Is Open Source. Feel Free To Edit, Use, Or Change Code. Credit Is Appreciated But Optional
