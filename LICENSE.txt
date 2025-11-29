@@ -1,4 +1,4 @@
-Roblox Crash Monitor – Ultra-Permissive License
+Roblox Crash Monitor – License
 Copyright (c) 2025 snowwhitecodez
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
