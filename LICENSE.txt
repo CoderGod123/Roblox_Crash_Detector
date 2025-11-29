@@ -1,37 +1,40 @@
-Roblox Crash Monitor – License
+RobloxCrashMonitor – License
 Copyright (c) 2025 snowwhitecodez
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and any associated documentation files (the “Software”), to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software for any purpose, including commercial or private use, and to
-permit others to do so without restriction.
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this Software and accompanying documentation (the “Software”), to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software for any purpose, including commercial use.
 
 Attribution is not required. Credit is optional but appreciated.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE, SECURITY, RELIABILITY, STABILITY, OR
-NON-INFRINGEMENT.
+FITNESS FOR A PARTICULAR PURPOSE, SECURITY, RELIABILITY, PERFORMANCE,
+OR NON-INFRINGEMENT. THE USER ASSUMES ALL RISK FOR THE USE OF THIS SOFTWARE.
+
+THE SOFTWARE MAY REQUIRE ADMINISTRATOR PRIVILEGES. BY USING THE SOFTWARE,
+THE USER ACKNOWLEDGES AND ACCEPTS THIS REQUIREMENT AND ALL RISKS ASSOCIATED
+WITH ELEVATED PERMISSIONS.
 
 UNDER NO CIRCUMSTANCES SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY
-CLAIM, DAMAGES, LOSS, OR OTHER LIABILITY OF ANY KIND, WHETHER IN AN ACTION OF
-CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE, ARISING FROM, OUT
-OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR INABILITY TO USE THE
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+CLAIMS, DAMAGES, LOSSES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE, ARISING FROM OR RELATED TO:
 
-THIS INCLUDES, BUT IS NOT LIMITED TO:
+- Data loss, corrupted files, hardware issues, or system instability  
+- Roblox crashes, bans, account actions, or corrupted game data  
+- Antivirus detections, warnings, or quarantines  
+- Incorrect setup, misconfiguration, misuse, or user error  
+- Use of modified, repackaged, or redistributed versions of the Software  
+- Loss of revenue, gameplay progress, productivity, or personal time  
+- Claims made by third parties, organizations, or dependents  
 
-• Data loss, corrupted files, damaged hardware, or system instability
-• Antivirus false positives, security warnings, or quarantines
-• Roblox crashes, bans, account issues, or corrupted game data
-• Misconfiguration, misuse, incorrect installation, or user error
-• Issues caused by modified or redistributed versions of the Software
-• Loss of profits, income, gameplay progress, or personal time
-• Claims from third parties, dependents, or organizations
+This includes any situation where the Software is used in unintended or
+unsupported ways, or on systems where the user lacks permission to do so.
 
-BY USING THE SOFTWARE, THE USER AGREES THAT THEY UNDERSTAND AND ACCEPT ALL
-RISKS ASSOCIATED WITH ITS USE, AND THAT THE AUTHOR BEARS ZERO RESPONSIBILITY
-FOR ANY OUTCOME.
+BY INSTALLING OR USING THE SOFTWARE, THE USER AGREES THAT THEY:
+1. Understand the risks associated with system-level monitoring tools.  
+2. Accept full responsibility for any and all outcomes.  
+3. Release the author from all liability, claims, and damages.  
 
-If the user does not agree with these terms, they must not use the Software.
+If the user does not agree to these terms, they must not use the Software.
